@@ -14,7 +14,7 @@
 .seccion_2 {
     width: 100vw;
     height: 100vh;
-    color: white;
+    color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,7 +22,7 @@
 
     h3 {
         margin-top: 35px;
-        color: white;
+        color: #fff;
         font-family: Fredericka the Great, montserrat;   
         font-size: 35px;       
     }
@@ -67,8 +67,8 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        border-top: solid 3px #ffff;
-        border-bottom: solid 3px #ffff;
+        border-top: solid 3px #fff;
+        border-bottom: solid 3px #fff;
         padding-top: 40px;
         padding-bottom: 40px;
         background-color: #43A88F;

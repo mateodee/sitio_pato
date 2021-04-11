@@ -632,14 +632,14 @@ footer {
   .seccion_2 {
     width: 100vw;
     height: 100vh;
-    color: white;
+    color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around; }
     .seccion_2 h3 {
       margin-top: 35px;
-      color: white;
+      color: #fff;
       font-family: Fredericka the Great, montserrat;
       font-size: 35px; }
     .seccion_2 .foto_perfil {
@@ -674,8 +674,8 @@ footer {
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      border-top: solid 3px #ffff;
-      border-bottom: solid 3px #ffff;
+      border-top: solid 3px #fff;
+      border-bottom: solid 3px #fff;
       padding-top: 40px;
       padding-bottom: 40px;
       background-color: #43A88F; }
@@ -896,7 +896,15 @@ footer {
       position: absolute;
       transform: rotate(-45deg);
       left: 45%;
-      bottom: 35%; } }
+      bottom: 35%; }
+    .container_home .round:hover span:nth-child(1) {
+      transform: none; }
+    .container_home .round:hover span:nth-child(2) {
+      transform: none; }
+    .container_home .round:hover span:nth-child(3) {
+      transform: none; }
+    .container_home .round:hover span:nth-child(4) {
+      transform: none; } }
 
 @media only screen and (max-width: 376px) {
   body {
