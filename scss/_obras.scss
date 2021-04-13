@@ -3,7 +3,7 @@
 
 .seccion_3 {
     width: 100vw;
-    height: 275vh;
+    height: 2000px;
     color: #ffff;
     display: flex;
     flex-direction: column;
@@ -44,6 +44,10 @@
             width: 250px;
             margin: 15px; 
             border: solid #ffff 6px;  
+        }
+
+        .gallery img:hover {
+            transform: none;
         }
         
         #ovalado {
