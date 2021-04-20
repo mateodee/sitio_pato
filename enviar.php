@@ -3,7 +3,7 @@
 // llamando a los campos
 
 $nombre = $_POST['nombre'];
-$correo = $_POST['correo '];
+$correo = $_POST['correo'];
 $selector = $_POST['selector'];
 $otro = $_POST['otro'];
 $mensaje = $_POST['mensaje'];
@@ -15,7 +15,7 @@ $asunto = "Contacto de tu web";
 
 $carta = "De: $nombre \n";
 $carta .= "Email: $correo \n";
-$carta .= "Como me conociste?: $selector";
+$carta .= "Como me conociste?: $selector \n";
 $carta .= "Te conocí por: $otro \n";
 $carta .= "Mensaje: $mensaje";
 

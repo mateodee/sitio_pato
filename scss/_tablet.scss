@@ -1,0 +1,499 @@
+@media only screen and (min-width: 505px) and (max-width: 1100px) {
+    body {
+        background-color: #43A88F;
+    }
+
+    nav{
+        display: none;
+    }
+
+    .instagram {
+        width: 50px;
+        height: auto;
+        position: relative;
+        top: 0;
+    }
+
+    .home {
+        background: url(../imagenes/fodo_index.jpg);
+        background-size: cover;
+        height: 100vh;
+        width: 100%;
+
+        h2, h3 {
+            font-family: Fredericka the Great, montserrat;
+            font-weight: 100;
+            text-align: center;
+        }
+    }
+
+    .home_desk {
+        display: none;
+    }
+
+    .container_home {
+        height: 70%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        h2 {
+            font-size: 45px;
+            margin-top: -215px;
+        }
+
+        h3 {
+            font-size: 40px;
+            margin-top: -135px;
+        }
+
+
+        .center-con {
+            margin-top: -60px;
+            display: flex;
+            height: 5vh;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .round {
+            border: none;
+        }
+        
+        span {
+            z-index: 0;
+            height: 4px;
+            width: 24px;
+            background: #fff;
+            transition: none;
+            margin-bottom: 5px;
+        }
+        
+        span:first-child {
+            display: block;
+            position: absolute;
+            transform: rotate(45deg);
+            left: 25%;
+            bottom: 35%;
+        }
+        
+        span:nth-child(2) {
+            display: block;
+            position: absolute;
+            transform: rotate(-45deg);
+            left: 45%;
+            bottom: 35%;
+        }
+
+        .round:hover span:nth-child(1) {
+            transform: none;
+        }
+        
+        .round:hover span:nth-child(2) {
+            transform: none;
+        }
+        
+        .round:hover span:nth-child(3) {
+            transform: none;
+        }
+        
+        .round:hover span:nth-child(4) {
+            transform: none;
+        }
+    }
+
+    @import "hamburger_menu";
+
+    // ---------------- Sobre mi ---------------------
+    // display none
+.apartados img {
+    display: none;
+}
+// fin display none
+
+
+.apartados {
+    height: 80px;
+    width: 100vw;
+    text-align: center;
+}
+
+.seccion_2 {
+    width: 100vw;
+    height: 800px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    h3 {
+        margin-top: 30px;
+        color: #fff;
+        font-family: Fredericka the Great, montserrat;   
+        font-size: 40px;       
+    }
+
+    .personal_info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+
+        .foto_perfil {
+            width: 150px;
+            height: 150px;
+            border-radius: 200px;
+            overflow: hidden;
+            margin-top: 0;
+    
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: -5px -20px;
+                transform: scale(2);
+            }
+        }
+    
+        .parrafo {
+            width: 90%;
+            height: 40%;
+            margin: 0;
+            line-height: 20px;
+    
+            p {
+                text-align: center;
+                color: #fff;
+                font-size: 15px;
+                font-family: montserrat, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                margin: 0 10px;
+            }
+        }
+    
+        .trayectoria {
+            width: 100%;
+            height: 130px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: -100px;
+            border-top: solid 2px #fff;
+            border-bottom: solid 2px #fff;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            background-color: #43A88F;
+        
+            h4 {
+                display: block;
+                font-size: 13px;
+                color: #fff;
+            }
+        
+            p {
+                font-size: 12px;
+                padding-left: 14px;
+                padding-right: 14px;
+                text-align: center;
+                color: #fff;
+            }
+        }
+    }
+}
+
+
+
+    // ---------------- Obras ---------------------
+    .seccion_3 {
+        width: 100vw;
+        height: 1100px;
+        color: #ffff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:flex-start;
+        background-image: url(/imagenes/fondo_sitio.jpg);
+        background-size: cover;
+    
+        .apartados {
+            display: none;
+        }
+    
+        h4 {
+            display: block;
+            color: #ffff;
+            font-family: Fredericka the Great, montserrat;   
+            font-size: 35px;    
+            margin-top: 50px;  
+            margin-bottom: 10px; 
+        }
+        
+        p {
+            color: #000;
+        }
+    
+        .container3 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+    
+            .gallery {
+                text-align: center;
+            }
+            
+            .gallery img {
+                transition: none;
+                width: 250px;
+                margin: 15px; 
+                margin-top: 30px;
+                border: solid #ffff 6px;  
+            }
+    
+            .gallery img:hover {
+                transform: none;
+            }
+            
+            #ovalado {
+                border: none;
+            }
+    
+            .galerias {
+                width: 100%;
+                height: 150px;
+                display: inline;
+            }
+        
+            .modales {
+                width: 100%;
+                height: 70px;
+                padding-top: 10px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+        
+                button {
+                    margin: 18px;
+                }
+        
+                .btn-primary {
+                    background-color: #fff;
+                    border: #3e9680 solid 2px;
+                    color: #3e9680;
+                }
+        
+                .btn-primary:hover {
+                    background-color: #fff;
+                    color: #3e9690;
+                }
+        
+                .carousel-caption {
+                    height: 5px;
+                    text-align: center;
+                    background-color: #ffff;
+                    opacity: .6;
+                    color: #000;
+        
+                    h5 {
+                        font-family: montserrat, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                        font-weight: bold;
+                        margin-top: -12px;
+                    }
+                }
+        
+            }
+        
+            .modales2 {
+                width: 100%;
+                height: 70px;
+                padding-bottom: 10px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+        
+                button {
+                    margin: 12px;
+                }
+        
+                .btn-primary {
+                    background-color: #fff;
+                    border: #3e9680 solid 2px;
+                    color: #3e9680;
+                }
+        
+                .btn-primary:hover {
+                    background-color: #fff;
+                    color: #3e9680;
+                }
+                
+                .carousel-caption {
+                    height: 5px;
+                    text-align: center;
+                    background-color: #ffff;
+                    opacity: .7;
+                    color: #000;
+        
+                    h5 {
+                        font-family: montserrat, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                        font-weight: bold;
+                        margin-top: -12px;
+                    }
+                }
+            }
+            
+        }
+    }
+    
+    
+    
+    
+    
+
+    // ---------------- Contacto ---------------------
+    .seccion_4 {
+        width: 100vw;
+        height: 950px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+        .apartados {
+            display: none;
+        }
+    
+        h4 {
+            display: block;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            color: white;
+            font-family: Fredericka the Great, montserrat;   
+            font-size: 35px;  
+        }
+    
+        form {
+            width: 90%;
+            height: 85%;
+            border: white dashed 2px;
+            margin-top: 15px;
+        }
+    
+        form > div {
+            margin-top: 35px;
+        }
+    
+        div {
+            text-align: center;
+            margin: 15px 0px;
+    
+            input {
+                width: 300px;
+                height: 25px;
+                border-radius: 4px;
+                border: none;
+            }
+    
+            label {
+                font-size: 20px;
+                margin-bottom: 25px;
+                color: #ffff;
+            }
+    
+            textarea {
+                width: 300px;
+                height: 90px;
+                border-radius: 5px;
+                border: none;
+            }
+    
+            select {
+                height: 25px;
+                border-radius: 5px;
+                border: none;
+                margin-bottom: 10px;
+            }
+    
+            ::-webkit-input-placeholder {
+                text-align: center;
+                font-size: 15px;
+             }
+    
+             .btn-primary {
+                background-color: rgb(67, 168, 143);
+                color: #ffff;
+                border: #ffff 3px solid;
+                font-weight: 600;
+            }  
+        }
+    
+        .redes {
+            display: none;
+        }
+      
+        .redes_mobile {
+            width: 50%;
+            height: 80px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        
+            img {
+                width: 50px;
+                margin: 15px;
+            }
+        }
+    }
+    
+    footer {
+        height: 60px;
+        width: 100%;
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: space-around;
+        justify-content: center;
+        margin-top: 20px;
+    
+        p {
+            margin-top: 12px;
+            font-size: 12px;
+            color: #ffff;
+            text-align: center;
+        }
+    }
+
+
+    // ---------------- Animaciones ---------------------
+    .animate__fadeIn {
+        animation: none;
+    }
+
+    .animate__slideInRight {
+        animation: none;
+    }
+
+    .animation {
+        animation: pulse 2s 1s linear  infinite;
+        animation-delay: 2s;
+    }
+    @keyframes pulse{
+        0% {
+            transform: scale(.8);
+        }
+
+        70% {
+            transform: scale(1);
+        }
+
+        100% {
+            transform: scale(.8);
+        }
+    }
+
+}

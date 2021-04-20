@@ -13,10 +13,10 @@ body {
 }
 
 .home {
-    background: url(../imagenes/index_desk.png);
+    background: url(../imagenes/index_desk2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 0px -100px;
+    background-position: 0px -80px;
     margin-bottom: 0;
     height: 100vh;
     width: 100%;
@@ -345,7 +345,7 @@ h4 {
 .seccion_3 {
     width: 100vw;
     height: 100vh;
-    background-image: url(../imagenes/fondo_sitio2.jpg);
+    background-image: url(../imagenes/fondo_sitio3.jpg);
     color: white;
     display: flex;
     flex-direction: row;
@@ -483,6 +483,10 @@ h4 {
                 font-weight: bold;
                 margin-top: -12px;
             }
+        }
+
+        .titulo {
+            font-size: 15px;
         }
 
     }
