@@ -19,10 +19,12 @@ body {
   display: none; }
 
 .home {
+  background-image: url(/imagenes/index_desk2.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: 0px -80px;
   margin-bottom: 0;
-  height: 100%;
+  height: 100vh;
   width: 100%; }
   .home h2, .home h3 {
     font-family: Fredericka the Great, montserrat;
@@ -160,18 +162,29 @@ body {
 h4 {
   display: none; }
 
-.foto_perfil {
-  width: 130px;
-  height: 130px;
-  border-radius: 200px;
-  overflow: hidden;
-  margin-top: -30px; }
-  .foto_perfil img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: -5px -20px;
-    transform: scale(2); }
+.info {
+  width: 500px;
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; }
+  .info .foto_perfil {
+    width: 130px;
+    height: 130px;
+    border-radius: 200px;
+    overflow: hidden;
+    margin-top: -30px;
+    margin-right: 100px; }
+    .info .foto_perfil img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: -5px -20px;
+      transform: scale(2); }
+  .info .premio {
+    width: 180px;
+    height: 180px; }
 
 .apartados {
   height: 100%;
@@ -252,7 +265,7 @@ h4 {
 .seccion_3 {
   width: 100vw;
   height: 100vh;
-  background-image: url(../imagenes/fondo_sitio2.jpg);
+  background-image: url(/imagenes/fondo_sitio3.jpg);
   color: white;
   display: flex;
   flex-direction: row;
@@ -317,11 +330,40 @@ h4 {
       transition: none;
       width: 230px;
       margin: 20px;
-      border: solid #ffff 6px;
+      box-shadow: 0 0 10px black;
+      border-radius: 5px;
       transition: ease-in-out .8s; }
     .container3 .gallery img:hover {
+      transform: scale(1.8);
+      transform-origin: center top;
+      transition: 1s ease-in-out;
+      box-shadow: none;
+      border-radius: 0; }
+    .container3 .gallery .transform {
+      transition: none;
+      width: 200px;
+      margin: 20px;
+      margin-right: 48px;
+      box-shadow: 0 0 10px black;
+      border-radius: 5px;
+      transition: ease-in-out .8s; }
+    .container3 .gallery .transform:hover {
+      transform: scale(1.8);
+      transform-origin: center bottom;
+      transition: 1s ease-in-out;
+      box-shadow: none;
+      border-radius: 0; }
+    .container3 .gallery .transform_arbol {
+      transition: none;
+      width: 210px;
+      margin: 20px;
+      border: none;
+      box-shadow: none;
+      border-radius: 0; }
+    .container3 .gallery .transform_arbol:hover {
       transform: scale(1.6);
-      transition: 1.5s ease-in-out; }
+      transform-origin: center bottom;
+      transition: 1s ease-in-out; }
   .container3 .galerias {
     width: 100%;
     height: 150px;
@@ -353,6 +395,8 @@ h4 {
         font-family: montserrat, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         font-weight: bold;
         margin-top: -12px; }
+    .container3 .modales .titulo {
+      font-size: 15px; }
   .container3 .modales2 {
     width: 100%;
     height: 70px;
@@ -526,7 +570,7 @@ footer {
     position: relative;
     top: 0; }
   .home {
-    background: url(../imagenes/fodo_index.jpg);
+    background: url(/imagenes/index_desk2.jpg);
     background-size: cover;
     height: 100vh;
     width: 100%; }
@@ -711,22 +755,34 @@ footer {
       flex-direction: column;
       align-items: center;
       justify-content: space-evenly; }
-      .seccion_2 .personal_info .foto_perfil {
-        width: 100px;
-        height: 100px;
-        border-radius: 200px;
-        overflow: hidden;
-        margin-top: 0; }
-        .seccion_2 .personal_info .foto_perfil img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          object-position: -5px -20px;
-          transform: scale(2); }
+      .seccion_2 .personal_info .info {
+        width: 300px;
+        height: 130px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center; }
+        .seccion_2 .personal_info .info .foto_perfil {
+          width: 100px;
+          height: 100px;
+          border-radius: 200px;
+          overflow: hidden;
+          margin-top: 0;
+          margin-right: 30px; }
+          .seccion_2 .personal_info .info .foto_perfil img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: -5px -20px;
+            transform: scale(2); }
+        .seccion_2 .personal_info .info .premio {
+          width: 90px;
+          height: 90px;
+          border-radius: 100px; }
       .seccion_2 .personal_info .parrafo {
         width: 90%;
         height: 40%;
-        margin: 20px;
+        margin: 10px;
         line-height: 20px; }
         .seccion_2 .personal_info .parrafo p {
           text-align: center;
@@ -784,11 +840,15 @@ footer {
       align-items: center; }
       .seccion_3 .container3 .gallery {
         text-align: center; }
+        .seccion_3 .container3 .gallery .transform_arbol {
+          transition: none;
+          width: 210px;
+          margin: 20px;
+          border: none; }
       .seccion_3 .container3 .gallery img {
         transition: none;
         width: 250px;
-        margin: 15px;
-        border: solid #ffff 6px; }
+        margin: 15px; }
       .seccion_3 .container3 .gallery img:hover {
         transform: none; }
       .seccion_3 .container3 #ovalado {
@@ -853,13 +913,437 @@ footer {
         width: 250px;
         height: 25px;
         border-radius: 4px;
-        border: none; }
+        border: none;
+        color: #0000; }
       .seccion_4 div label {
         font-size: 15px;
         margin-bottom: 12px;
         color: #ffff; }
       .seccion_4 div textarea {
         width: 250px;
+        height: 90px;
+        border-radius: 5px;
+        border: none; }
+      .seccion_4 div select {
+        height: 25px;
+        border-radius: 5px;
+        border: none;
+        margin-bottom: 10px;
+        color: #0000; }
+      .seccion_4 div ::-webkit-input-placeholder {
+        text-align: center;
+        font-size: 15px; }
+      .seccion_4 div .btn-primary {
+        background-color: #43a88f;
+        color: #ffff;
+        border: #ffff 3px solid;
+        font-weight: 600; }
+    .seccion_4 .redes {
+      display: none; }
+    .seccion_4 .redes_mobile {
+      width: 50%;
+      height: 80px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center; }
+      .seccion_4 .redes_mobile img {
+        width: 40px;
+        margin: 15px; }
+  footer {
+    height: 40px;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: space-around;
+    justify-content: center;
+    margin-top: 20px; }
+    footer p {
+      margin-top: 12px;
+      font-size: 10px;
+      color: #ffff;
+      text-align: center; }
+  .animate__fadeIn {
+    animation: none; }
+  .animate__slideInRight {
+    animation: none; }
+  .animation {
+    animation: pulse 2s 1s linear  infinite;
+    animation-delay: 2s; }
+  @keyframes pulse {
+    0% {
+      transform: scale(0.8); }
+    70% {
+      transform: scale(1); }
+    100% {
+      transform: scale(0.8); } } }
+
+@media only screen and (min-width: 280px) and (max-width: 330px) {
+  body {
+    background-color: #43A88F; }
+  nav {
+    display: none; }
+  .instagram {
+    width: 30px;
+    height: auto;
+    position: relative;
+    top: 0; }
+  .uk_flag {
+    width: 30px; }
+  .home {
+    background: url(../imagenes/fodo_index.jpg);
+    background-size: cover;
+    height: 100vh;
+    width: 100%; }
+    .home h2, .home h3 {
+      font-family: Fredericka the Great, montserrat;
+      font-weight: 100;
+      text-align: center; }
+  .home_desk {
+    display: none; }
+  .container_home {
+    height: 70%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    .container_home h2 {
+      font-size: 26px;
+      margin-top: -215px; }
+    .container_home h3 {
+      font-size: 20px;
+      margin-top: -155px; }
+    .container_home .center-con {
+      margin-top: -110px;
+      display: flex;
+      height: 5vh;
+      align-items: center;
+      justify-content: center; }
+    .container_home .round {
+      border: none; }
+    .container_home span {
+      z-index: 0;
+      height: 2px;
+      width: 24px;
+      background: #fff;
+      transition: none;
+      margin-bottom: 5px; }
+    .container_home span:first-child {
+      display: block;
+      position: absolute;
+      transform: rotate(45deg);
+      left: 25%;
+      bottom: 35%; }
+    .container_home span:nth-child(2) {
+      display: block;
+      position: absolute;
+      transform: rotate(-45deg);
+      left: 45%;
+      bottom: 35%; }
+    .container_home .round:hover span:nth-child(1) {
+      transform: none; }
+    .container_home .round:hover span:nth-child(2) {
+      transform: none; }
+    .container_home .round:hover span:nth-child(3) {
+      transform: none; }
+    .container_home .round:hover span:nth-child(4) {
+      transform: none; }
+  .menu-wrap {
+    display: block;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1; }
+  .menu-wrap .toggler {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    opacity: 0; }
+  .menu-wrap .hamburger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 53px;
+    height: 53px;
+    padding: 1rem;
+    border-radius: 100px;
+    background-color: #bdb6a9;
+    opacity: 0.8;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .menu-wrap .hamburger > div {
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background-color: #ffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease; }
+  .menu-wrap .hamburger > div:before,
+  .menu-wrap .hamburger > div:after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: -8px;
+    width: 100%;
+    height: 2px;
+    background: inherit; }
+  .menu-wrap .hamburger > div:after {
+    top: 8px; }
+  .menu-wrap .toggler:checked + .hamburger {
+    background-color: rgba(67, 168, 143, 0); }
+  .menu-wrap .toggler:checked + .hamburger > div {
+    transform: rotate(135deg); }
+  .menu-wrap .toggler:checked + .hamburger > div:before,
+  .menu-wrap .toggler:checked + .hamburger > div:after {
+    top: 0;
+    transform: rotate(90deg); }
+  .menu-wrap .toggler:checked ~ .menu {
+    visibility: visible; }
+  .menu-wrap .toggler:checked ~ .menu > div {
+    transform: scale(1);
+    transition-duration: 0.6s; }
+  .menu-wrap .toggler:checked ~ .menu > div > div {
+    opacity: 1;
+    transition: opacity 0.4s ease; }
+  .menu-wrap .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .menu-wrap .menu > div {
+    background: rgba(67, 168, 143, 0.9);
+    border-radius: 50%;
+    width: 250vw;
+    height: 250vw;
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    transition: all 0.4s ease; }
+  .menu-wrap .menu > div > div {
+    text-align: center;
+    max-width: 90vw;
+    max-height: 100vh;
+    opacity: 0;
+    transition: opacity 0.4s ease; }
+  .menu-wrap .menu > div > div > ul > li {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    color: #ffff;
+    font-size: 1.5rem;
+    padding: 2.5rem; }
+  .menu-wrap .menu > div > div > ul > li > a {
+    color: inherit;
+    text-decoration: none;
+    font-family: Fredericka the Great, montserrat;
+    transition: color 0.4s ease; }
+  .apartados img {
+    display: none; }
+  .apartados {
+    height: 80px;
+    width: 100vw;
+    text-align: center; }
+  .seccion_2 {
+    width: 100vw;
+    height: 700px;
+    color: #fff;
+    display: flex;
+    flex-direction: column; }
+    .seccion_2 h3 {
+      margin-top: 30px;
+      color: #fff;
+      font-family: Fredericka the Great, montserrat;
+      font-size: 32px; }
+    .seccion_2 .personal_info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly; }
+      .seccion_2 .personal_info .info {
+        width: 300px;
+        height: 130px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-top: -50px; }
+        .seccion_2 .personal_info .info .foto_perfil {
+          width: 100px;
+          height: 100px;
+          border-radius: 200px;
+          overflow: hidden;
+          margin-top: 0;
+          margin-right: 30px; }
+          .seccion_2 .personal_info .info .foto_perfil img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: -5px -20px;
+            transform: scale(2); }
+        .seccion_2 .personal_info .info .premio {
+          width: 80px;
+          height: 80px;
+          border-radius: 100px; }
+      .seccion_2 .personal_info .parrafo {
+        width: 90%;
+        height: 40%;
+        margin: 10px;
+        line-height: 20px; }
+        .seccion_2 .personal_info .parrafo p {
+          text-align: center;
+          color: #fff;
+          font-size: 10px;
+          font-family: montserrat, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+          margin: 0 10px; }
+      .seccion_2 .personal_info .trayectoria {
+        width: 100%;
+        height: 130px;
+        display: flex;
+        margin-top: 50px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-top: solid 2px #fff;
+        border-bottom: solid 2px #fff;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        background-color: #43A88F; }
+        .seccion_2 .personal_info .trayectoria h4 {
+          display: block;
+          font-size: 11px;
+          color: #fff; }
+        .seccion_2 .personal_info .trayectoria p {
+          font-size: 10px;
+          padding-left: 14px;
+          padding-right: 14px;
+          text-align: center;
+          color: #fff; }
+  .seccion_3 {
+    width: 100vw;
+    height: 1800px;
+    color: #ffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-image: url(/imagenes/fondo_sitio.jpg);
+    background-size: cover; }
+    .seccion_3 .apartados {
+      display: none; }
+    .seccion_3 h4 {
+      display: block;
+      color: #ffff;
+      font-family: Fredericka the Great, montserrat;
+      font-size: 35px;
+      margin-top: 50px;
+      margin-bottom: 25px; }
+    .seccion_3 p {
+      color: #000; }
+    .seccion_3 .container3 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .seccion_3 .container3 .gallery {
+        text-align: center; }
+        .seccion_3 .container3 .gallery .transform_arbol {
+          transition: none;
+          width: 210px;
+          margin: 20px;
+          border: none; }
+      .seccion_3 .container3 .gallery img {
+        transition: none;
+        width: 200px;
+        margin: 15px; }
+      .seccion_3 .container3 .gallery img:hover {
+        transform: none; }
+      .seccion_3 .container3 #ovalado {
+        border: none; }
+      .seccion_3 .container3 .galerias {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: -100px;
+        width: 100%;
+        height: 800px;
+        padding-top: 12px; }
+        .seccion_3 .container3 .galerias .modales {
+          height: 60px;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center; }
+        .seccion_3 .container3 .galerias .modales2 {
+          height: 60px;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center; }
+        .seccion_3 .container3 .galerias .btn-primary {
+          background-color: #43a88f;
+          border: none;
+          color: #ffff;
+          width: 100%;
+          font-weight: bold;
+          border-radius: 0px; }
+  .seccion_4 {
+    width: 100vw;
+    height: 750px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .seccion_4 .apartados {
+      display: none; }
+    .seccion_4 h4 {
+      display: block;
+      margin-top: 50px;
+      margin-bottom: 20px;
+      color: white;
+      font-family: Fredericka the Great, montserrat;
+      font-size: 35px; }
+    .seccion_4 form {
+      width: 100%;
+      height: 85%;
+      border: white dashed 2px;
+      margin-top: 15px; }
+    .seccion_4 form > div {
+      margin-top: 20px; }
+    .seccion_4 div {
+      text-align: center;
+      margin: 15px 0px; }
+      .seccion_4 div input {
+        width: 200px;
+        height: 25px;
+        border-radius: 4px;
+        border: none; }
+      .seccion_4 div label {
+        font-size: 15px;
+        margin-bottom: 12px;
+        color: #ffff; }
+      .seccion_4 div textarea {
+        width: 200px;
         height: 90px;
         border-radius: 5px;
         border: none; }
@@ -900,6 +1384,440 @@ footer {
     footer p {
       margin-top: 12px;
       font-size: 10px;
+      color: #ffff;
+      text-align: center; }
+  .animate__fadeIn {
+    animation: none; }
+  .animate__slideInRight {
+    animation: none; }
+  .animation {
+    animation: pulse 2s 1s linear  infinite;
+    animation-delay: 2s; }
+  @keyframes pulse {
+    0% {
+      transform: scale(0.8); }
+    70% {
+      transform: scale(1); }
+    100% {
+      transform: scale(0.8); } } }
+
+@media only screen and (min-width: 505px) and (max-width: 1100px) {
+  body {
+    background-color: #43A88F; }
+  nav {
+    display: none; }
+  .instagram {
+    width: 50px;
+    height: auto;
+    position: relative;
+    top: 0; }
+  .home {
+    background: url(../imagenes/fodo_index.jpg);
+    background-size: cover;
+    height: 100vh;
+    width: 100%; }
+    .home h2, .home h3 {
+      font-family: Fredericka the Great, montserrat;
+      font-weight: 100;
+      text-align: center; }
+  .home_desk {
+    display: none; }
+  .container_home {
+    height: 70%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    .container_home h2 {
+      font-size: 45px;
+      margin-top: -215px; }
+    .container_home h3 {
+      font-size: 40px;
+      margin-top: -135px; }
+    .container_home .center-con {
+      margin-top: -60px;
+      display: flex;
+      height: 5vh;
+      align-items: center;
+      justify-content: center; }
+    .container_home .round {
+      border: none; }
+    .container_home span {
+      z-index: 0;
+      height: 4px;
+      width: 24px;
+      background: #fff;
+      transition: none;
+      margin-bottom: 5px; }
+    .container_home span:first-child {
+      display: block;
+      position: absolute;
+      transform: rotate(45deg);
+      left: 25%;
+      bottom: 35%; }
+    .container_home span:nth-child(2) {
+      display: block;
+      position: absolute;
+      transform: rotate(-45deg);
+      left: 45%;
+      bottom: 35%; }
+    .container_home .round:hover span:nth-child(1) {
+      transform: none; }
+    .container_home .round:hover span:nth-child(2) {
+      transform: none; }
+    .container_home .round:hover span:nth-child(3) {
+      transform: none; }
+    .container_home .round:hover span:nth-child(4) {
+      transform: none; }
+  .menu-wrap {
+    display: block;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1; }
+  .menu-wrap .toggler {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    opacity: 0; }
+  .menu-wrap .hamburger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 53px;
+    height: 53px;
+    padding: 1rem;
+    border-radius: 100px;
+    background-color: #bdb6a9;
+    opacity: 0.8;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .menu-wrap .hamburger > div {
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background-color: #ffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease; }
+  .menu-wrap .hamburger > div:before,
+  .menu-wrap .hamburger > div:after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: -8px;
+    width: 100%;
+    height: 2px;
+    background: inherit; }
+  .menu-wrap .hamburger > div:after {
+    top: 8px; }
+  .menu-wrap .toggler:checked + .hamburger {
+    background-color: rgba(67, 168, 143, 0); }
+  .menu-wrap .toggler:checked + .hamburger > div {
+    transform: rotate(135deg); }
+  .menu-wrap .toggler:checked + .hamburger > div:before,
+  .menu-wrap .toggler:checked + .hamburger > div:after {
+    top: 0;
+    transform: rotate(90deg); }
+  .menu-wrap .toggler:checked ~ .menu {
+    visibility: visible; }
+  .menu-wrap .toggler:checked ~ .menu > div {
+    transform: scale(1);
+    transition-duration: 0.6s; }
+  .menu-wrap .toggler:checked ~ .menu > div > div {
+    opacity: 1;
+    transition: opacity 0.4s ease; }
+  .menu-wrap .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .menu-wrap .menu > div {
+    background: rgba(67, 168, 143, 0.9);
+    border-radius: 50%;
+    width: 250vw;
+    height: 250vw;
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    transition: all 0.4s ease; }
+  .menu-wrap .menu > div > div {
+    text-align: center;
+    max-width: 90vw;
+    max-height: 100vh;
+    opacity: 0;
+    transition: opacity 0.4s ease; }
+  .menu-wrap .menu > div > div > ul > li {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    color: #ffff;
+    font-size: 1.5rem;
+    padding: 2.5rem; }
+  .menu-wrap .menu > div > div > ul > li > a {
+    color: inherit;
+    text-decoration: none;
+    font-family: Fredericka the Great, montserrat;
+    transition: color 0.4s ease; }
+  .apartados img {
+    display: none; }
+  .apartados {
+    height: 80px;
+    width: 100vw;
+    text-align: center; }
+  .seccion_2 {
+    width: 100vw;
+    height: 800px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center; }
+    .seccion_2 h3 {
+      margin-top: 30px;
+      color: #fff;
+      font-family: Fredericka the Great, montserrat;
+      font-size: 40px; }
+    .seccion_2 .personal_info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around; }
+      .seccion_2 .personal_info .foto_perfil {
+        width: 150px;
+        height: 150px;
+        border-radius: 200px;
+        overflow: hidden;
+        margin-top: 0; }
+        .seccion_2 .personal_info .foto_perfil img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: -5px -20px;
+          transform: scale(2); }
+      .seccion_2 .personal_info .parrafo {
+        width: 90%;
+        height: 40%;
+        margin: 0;
+        line-height: 20px; }
+        .seccion_2 .personal_info .parrafo p {
+          text-align: center;
+          color: #fff;
+          font-size: 15px;
+          font-family: montserrat, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+          margin: 0 10px; }
+      .seccion_2 .personal_info .trayectoria {
+        width: 100%;
+        height: 130px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: -100px;
+        border-top: solid 2px #fff;
+        border-bottom: solid 2px #fff;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        background-color: #43A88F; }
+        .seccion_2 .personal_info .trayectoria h4 {
+          display: block;
+          font-size: 13px;
+          color: #fff; }
+        .seccion_2 .personal_info .trayectoria p {
+          font-size: 12px;
+          padding-left: 14px;
+          padding-right: 14px;
+          text-align: center;
+          color: #fff; }
+  .seccion_3 {
+    width: 100vw;
+    height: 1100px;
+    color: #ffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-image: url(/imagenes/fondo_sitio.jpg);
+    background-size: cover; }
+    .seccion_3 .apartados {
+      display: none; }
+    .seccion_3 h4 {
+      display: block;
+      color: #ffff;
+      font-family: Fredericka the Great, montserrat;
+      font-size: 35px;
+      margin-top: 50px;
+      margin-bottom: 10px; }
+    .seccion_3 p {
+      color: #000; }
+    .seccion_3 .container3 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .seccion_3 .container3 .gallery {
+        text-align: center; }
+      .seccion_3 .container3 .gallery img {
+        transition: none;
+        width: 250px;
+        margin: 15px;
+        margin-top: 30px;
+        border: solid #ffff 6px; }
+      .seccion_3 .container3 .gallery img:hover {
+        transform: none; }
+      .seccion_3 .container3 #ovalado {
+        border: none; }
+      .seccion_3 .container3 .galerias {
+        width: 100%;
+        height: 150px;
+        display: inline; }
+      .seccion_3 .container3 .modales {
+        width: 100%;
+        height: 70px;
+        padding-top: 10px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center; }
+        .seccion_3 .container3 .modales button {
+          margin: 18px; }
+        .seccion_3 .container3 .modales .btn-primary {
+          background-color: #fff;
+          border: #3e9680 solid 2px;
+          color: #3e9680; }
+        .seccion_3 .container3 .modales .btn-primary:hover {
+          background-color: #fff;
+          color: #3e9690; }
+        .seccion_3 .container3 .modales .carousel-caption {
+          height: 5px;
+          text-align: center;
+          background-color: #ffff;
+          opacity: .6;
+          color: #000; }
+          .seccion_3 .container3 .modales .carousel-caption h5 {
+            font-family: montserrat, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: bold;
+            margin-top: -12px; }
+      .seccion_3 .container3 .modales2 {
+        width: 100%;
+        height: 70px;
+        padding-bottom: 10px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center; }
+        .seccion_3 .container3 .modales2 button {
+          margin: 12px; }
+        .seccion_3 .container3 .modales2 .btn-primary {
+          background-color: #fff;
+          border: #3e9680 solid 2px;
+          color: #3e9680; }
+        .seccion_3 .container3 .modales2 .btn-primary:hover {
+          background-color: #fff;
+          color: #3e9680; }
+        .seccion_3 .container3 .modales2 .carousel-caption {
+          height: 5px;
+          text-align: center;
+          background-color: #ffff;
+          opacity: .7;
+          color: #000; }
+          .seccion_3 .container3 .modales2 .carousel-caption h5 {
+            font-family: montserrat, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: bold;
+            margin-top: -12px; }
+  .seccion_4 {
+    width: 100vw;
+    height: 950px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .seccion_4 .apartados {
+      display: none; }
+    .seccion_4 h4 {
+      display: block;
+      margin-top: 50px;
+      margin-bottom: 20px;
+      color: white;
+      font-family: Fredericka the Great, montserrat;
+      font-size: 35px; }
+    .seccion_4 form {
+      width: 90%;
+      height: 85%;
+      border: white dashed 2px;
+      margin-top: 15px; }
+    .seccion_4 form > div {
+      margin-top: 35px; }
+    .seccion_4 div {
+      text-align: center;
+      margin: 15px 0px; }
+      .seccion_4 div input {
+        width: 300px;
+        height: 25px;
+        border-radius: 4px;
+        border: none; }
+      .seccion_4 div label {
+        font-size: 20px;
+        margin-bottom: 25px;
+        color: #ffff; }
+      .seccion_4 div textarea {
+        width: 300px;
+        height: 90px;
+        border-radius: 5px;
+        border: none; }
+      .seccion_4 div select {
+        height: 25px;
+        border-radius: 5px;
+        border: none;
+        margin-bottom: 10px; }
+      .seccion_4 div ::-webkit-input-placeholder {
+        text-align: center;
+        font-size: 15px; }
+      .seccion_4 div .btn-primary {
+        background-color: #43a88f;
+        color: #ffff;
+        border: #ffff 3px solid;
+        font-weight: 600; }
+    .seccion_4 .redes {
+      display: none; }
+    .seccion_4 .redes_mobile {
+      width: 50%;
+      height: 80px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center; }
+      .seccion_4 .redes_mobile img {
+        width: 50px;
+        margin: 15px; }
+  footer {
+    height: 60px;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: space-around;
+    justify-content: center;
+    margin-top: 20px; }
+    footer p {
+      margin-top: 12px;
+      font-size: 12px;
       color: #ffff;
       text-align: center; }
   .animate__fadeIn {
