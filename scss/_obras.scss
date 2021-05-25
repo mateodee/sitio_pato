@@ -37,22 +37,31 @@
 
         .gallery {
             text-align: center;
+
+            .transform_arbol {
+                transition: none;
+                width: 210px;
+                margin: 20px; 
+                border: none;
+            }
+
         }
         
         .gallery img {
             transition: none;
             width: 250px;
-            margin: 15px; 
-            border: solid #ffff 6px;  
+            margin: 15px;  
         }
 
         .gallery img:hover {
             transform: none;
         }
+
         
         #ovalado {
             border: none;
         }
+
 
         .galerias {
             display: flex;

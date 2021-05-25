@@ -19,7 +19,7 @@ body {
   display: none; }
 
 .home {
-  background: url(../imagenes/index_desk2.jpg);
+  background-image: url(/imagenes/index_desk2.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 0px -80px;
@@ -162,18 +162,29 @@ body {
 h4 {
   display: none; }
 
-.foto_perfil {
-  width: 130px;
-  height: 130px;
-  border-radius: 200px;
-  overflow: hidden;
-  margin-top: -30px; }
-  .foto_perfil img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: -5px -20px;
-    transform: scale(2); }
+.info {
+  width: 500px;
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; }
+  .info .foto_perfil {
+    width: 130px;
+    height: 130px;
+    border-radius: 200px;
+    overflow: hidden;
+    margin-top: -30px;
+    margin-right: 100px; }
+    .info .foto_perfil img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: -5px -20px;
+      transform: scale(2); }
+  .info .premio {
+    width: 180px;
+    height: 180px; }
 
 .apartados {
   height: 100%;
@@ -254,7 +265,7 @@ h4 {
 .seccion_3 {
   width: 100vw;
   height: 100vh;
-  background-image: url(../imagenes/fondo_sitio3.jpg);
+  background-image: url(/imagenes/fondo_sitio3.jpg);
   color: white;
   display: flex;
   flex-direction: row;
@@ -319,11 +330,40 @@ h4 {
       transition: none;
       width: 230px;
       margin: 20px;
-      border: solid #ffff 6px;
+      box-shadow: 0 0 10px black;
+      border-radius: 5px;
       transition: ease-in-out .8s; }
     .container3 .gallery img:hover {
+      transform: scale(1.8);
+      transform-origin: center top;
+      transition: 1s ease-in-out;
+      box-shadow: none;
+      border-radius: 0; }
+    .container3 .gallery .transform {
+      transition: none;
+      width: 200px;
+      margin: 20px;
+      margin-right: 48px;
+      box-shadow: 0 0 10px black;
+      border-radius: 5px;
+      transition: ease-in-out .8s; }
+    .container3 .gallery .transform:hover {
+      transform: scale(1.8);
+      transform-origin: center bottom;
+      transition: 1s ease-in-out;
+      box-shadow: none;
+      border-radius: 0; }
+    .container3 .gallery .transform_arbol {
+      transition: none;
+      width: 210px;
+      margin: 20px;
+      border: none;
+      box-shadow: none;
+      border-radius: 0; }
+    .container3 .gallery .transform_arbol:hover {
       transform: scale(1.6);
-      transition: 1.5s ease-in-out; }
+      transform-origin: center bottom;
+      transition: 1s ease-in-out; }
   .container3 .galerias {
     width: 100%;
     height: 150px;
@@ -530,7 +570,7 @@ footer {
     position: relative;
     top: 0; }
   .home {
-    background: url(../imagenes/fodo_index.jpg);
+    background: url(/imagenes/index_desk2.jpg);
     background-size: cover;
     height: 100vh;
     width: 100%; }
@@ -715,18 +755,30 @@ footer {
       flex-direction: column;
       align-items: center;
       justify-content: space-evenly; }
-      .seccion_2 .personal_info .foto_perfil {
-        width: 100px;
-        height: 100px;
-        border-radius: 200px;
-        overflow: hidden;
-        margin-top: 0; }
-        .seccion_2 .personal_info .foto_perfil img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          object-position: -5px -20px;
-          transform: scale(2); }
+      .seccion_2 .personal_info .info {
+        width: 300px;
+        height: 130px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center; }
+        .seccion_2 .personal_info .info .foto_perfil {
+          width: 100px;
+          height: 100px;
+          border-radius: 200px;
+          overflow: hidden;
+          margin-top: 0;
+          margin-right: 30px; }
+          .seccion_2 .personal_info .info .foto_perfil img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: -5px -20px;
+            transform: scale(2); }
+        .seccion_2 .personal_info .info .premio {
+          width: 90px;
+          height: 90px;
+          border-radius: 100px; }
       .seccion_2 .personal_info .parrafo {
         width: 90%;
         height: 40%;
@@ -788,11 +840,15 @@ footer {
       align-items: center; }
       .seccion_3 .container3 .gallery {
         text-align: center; }
+        .seccion_3 .container3 .gallery .transform_arbol {
+          transition: none;
+          width: 210px;
+          margin: 20px;
+          border: none; }
       .seccion_3 .container3 .gallery img {
         transition: none;
         width: 250px;
-        margin: 15px;
-        border: solid #ffff 6px; }
+        margin: 15px; }
       .seccion_3 .container3 .gallery img:hover {
         transform: none; }
       .seccion_3 .container3 #ovalado {
@@ -923,7 +979,7 @@ footer {
     100% {
       transform: scale(0.8); } } }
 
-@media only screen and (min-width: 280px) and (max-width: 328px) {
+@media only screen and (min-width: 280px) and (max-width: 330px) {
   body {
     background-color: #43A88F; }
   nav {
@@ -1121,18 +1177,31 @@ footer {
       flex-direction: column;
       align-items: center;
       justify-content: space-evenly; }
-      .seccion_2 .personal_info .foto_perfil {
-        width: 100px;
-        height: 100px;
-        border-radius: 200px;
-        overflow: hidden;
-        margin-top: -30px; }
-        .seccion_2 .personal_info .foto_perfil img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          object-position: -5px -20px;
-          transform: scale(2); }
+      .seccion_2 .personal_info .info {
+        width: 300px;
+        height: 130px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-top: -50px; }
+        .seccion_2 .personal_info .info .foto_perfil {
+          width: 100px;
+          height: 100px;
+          border-radius: 200px;
+          overflow: hidden;
+          margin-top: 0;
+          margin-right: 30px; }
+          .seccion_2 .personal_info .info .foto_perfil img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: -5px -20px;
+            transform: scale(2); }
+        .seccion_2 .personal_info .info .premio {
+          width: 80px;
+          height: 80px;
+          border-radius: 100px; }
       .seccion_2 .personal_info .parrafo {
         width: 90%;
         height: 40%;
@@ -1148,7 +1217,7 @@ footer {
         width: 100%;
         height: 130px;
         display: flex;
-        margin-top: 30px;
+        margin-top: 50px;
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -1195,11 +1264,15 @@ footer {
       align-items: center; }
       .seccion_3 .container3 .gallery {
         text-align: center; }
+        .seccion_3 .container3 .gallery .transform_arbol {
+          transition: none;
+          width: 210px;
+          margin: 20px;
+          border: none; }
       .seccion_3 .container3 .gallery img {
         transition: none;
         width: 200px;
-        margin: 15px;
-        border: solid #ffff 6px; }
+        margin: 15px; }
       .seccion_3 .container3 .gallery img:hover {
         transform: none; }
       .seccion_3 .container3 #ovalado {
